@@ -8,8 +8,8 @@ public class OnOffButton : MonoBehaviour
     private const string Master = "Master";
 
     [SerializeField] private AudioMixerGroup _mixer;
-    [SerializeField] private Color _onColor;
-    [SerializeField] private Color _offColor;
+    [SerializeField] private Color _activeColor;
+    [SerializeField] private Color _inactiveColor;
 
     private bool _isOn = true;  
     private Image _image;
@@ -31,7 +31,7 @@ public class OnOffButton : MonoBehaviour
 
     private void UpdateButtonColor()
     {
-        Color color = _isOn ? _onColor : _offColor;
+        Color color = _isOn ? _activeColor : _inactiveColor;
 
         ChangeButtonColor(color);
     }

@@ -11,5 +11,6 @@ public class VolumeChanger : MonoBehaviour
         float minValue = -80;
 
         _mixer.audioMixer.SetFloat(_mixer.name, Mathf.Lerp(minValue, maxValue, volume));
+        Debug.Log(_mixer.name);
     }
 }
